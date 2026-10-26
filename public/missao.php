@@ -212,14 +212,87 @@ $flash = flash_get();
         <p class="mission-curation-note">Esta é uma seleção editorial inicial, identificada por veículo e data. A redação deve revisar os links e atualizar a seleção periodicamente; não reproduzimos o texto integral das reportagens externas.</p>
     </section>
 
+    <section class="mission-section mission-channels-section" aria-labelledby="mission-channels-title">
+        <div class="section-heading">
+            <div><p class="mission-kicker">VÍDEOS E TRANSMISSÕES</p><h2 id="mission-channels-title">Canais no YouTube</h2></div>
+            <span class="section-count">Canais identificados</span>
+        </div>
+        <div class="mission-youtube-grid">
+            <a class="mission-youtube-card" href="https://www.youtube.com/@PartidoMissao" target="_blank" rel="noopener noreferrer">
+                <span class="mission-platform-icon" aria-hidden="true">▶</span>
+                <span class="mission-platform-overline">CANAL OFICIAL DO PARTIDO</span>
+                <strong>Partido Missão</strong>
+                <small>Lives, comunicados, coletivas e vídeos publicados pelo partido.</small>
+                <span class="mission-platform-cta">Abrir canal no YouTube ↗</span>
+            </a>
+            <a class="mission-youtube-card" href="https://www.youtube.com/@RenanSantosMBL" target="_blank" rel="noopener noreferrer">
+                <span class="mission-platform-icon" aria-hidden="true">▶</span>
+                <span class="mission-platform-overline">CANAL DE RENAN SANTOS</span>
+                <strong>Renan Santos | VOTE 14</strong>
+                <small>Vídeos e transmissões de Renan Santos. Canal listado entre os endereços públicos da candidatura.</small>
+                <span class="mission-platform-cta">Abrir canal no YouTube ↗</span>
+            </a>
+        </div>
+        <p class="mission-curation-note">Os canais são externos ao TECH NEWS. A identificação dos canais e das contas pode mudar; confira também a central de links oficial do partido.</p>
+    </section>
+
+    <section class="mission-section" aria-labelledby="mission-app-title">
+        <div class="section-heading">
+            <div><p class="mission-kicker">APLICATIVO E PLATAFORMAS</p><h2 id="mission-app-title">App Missão e ferramentas digitais</h2></div>
+        </div>
+        <div class="mission-app-panel">
+            <div class="mission-app-brand">
+                <img src="<?= e($logoUrl) ?>" alt="Símbolo do Partido Missão" loading="lazy" referrerpolicy="no-referrer">
+                <div><span>APLICATIVO OFICIAL DO PARTIDO</span><h3>Missão</h3><p>A página oficial do app apresenta missões, feed de vídeos, busca por falas e rankings da comunidade do aplicativo.</p></div>
+            </div>
+            <div class="mission-app-actions">
+                <a href="https://app.missao.org.br/" target="_blank" rel="noopener noreferrer" class="mission-app-link mission-app-link-featured">Conhecer o aplicativo ↗</a>
+                <a href="https://play.google.com/store/apps/details?hl=pt_BR&amp;id=br.org.missao.militante" target="_blank" rel="noopener noreferrer" class="mission-app-link">Baixar no Google Play ↗</a>
+                <a href="https://apps.apple.com/br/app/miss%C3%A3o/id6786810551" target="_blank" rel="noopener noreferrer" class="mission-app-link">Baixar na App Store ↗</a>
+            </div>
+            <p class="mission-app-note">Os links levam à página oficial e às lojas de aplicativos. Antes de instalar, confira o desenvolvedor e a política de privacidade exibida na loja.</p>
+        </div>
+    </section>
+
+    <section class="mission-section" aria-labelledby="mission-social-title">
+        <div class="section-heading">
+            <div><p class="mission-kicker">CANAIS DE COMUNICAÇÃO</p><h2 id="mission-social-title">Redes sociais oficiais</h2></div>
+            <a class="mission-view-all" href="https://linktr.ee/partidomissao" target="_blank" rel="noopener noreferrer">Central de links ↗</a>
+        </div>
+        <div class="mission-social-grid">
+            <a href="https://instagram.com/partidomissao" target="_blank" rel="noopener noreferrer"><span>INSTAGRAM</span><strong>@partidomissao ↗</strong><small>Publicações e vídeos curtos</small></a>
+            <a href="https://www.facebook.com/partidomissao" target="_blank" rel="noopener noreferrer"><span>FACEBOOK</span><strong>Partido Missão ↗</strong><small>Página pública do partido</small></a>
+            <a href="https://x.com/partidomissao" target="_blank" rel="noopener noreferrer"><span>X</span><strong>@partidomissao ↗</strong><small>Atualizações e posicionamentos</small></a>
+            <a href="https://www.tiktok.com/@partidomissao" target="_blank" rel="noopener noreferrer"><span>TIKTOK</span><strong>@partidomissao ↗</strong><small>Vídeos curtos</small></a>
+            <a href="https://t.me/partidomissao" target="_blank" rel="noopener noreferrer"><span>TELEGRAM</span><strong>Canal Missão ↗</strong><small>Mensagens e vídeos compartilhados</small></a>
+            <a href="https://www.whatsapp.com/channel/0029Va9jVpT1t90cwN3Xk21A" target="_blank" rel="noopener noreferrer"><span>WHATSAPP</span><strong>Canal Partido Missão ↗</strong><small>Atualizações pelo WhatsApp</small></a>
+        </div>
+    </section>
+
+    <section class="mission-section" aria-labelledby="mission-services-title">
+        <div class="section-heading">
+            <div><p class="mission-kicker">OUTROS LINKS DO ECOSSISTEMA</p><h2 id="mission-services-title">Projetos e serviços</h2></div>
+        </div>
+        <div class="mission-services-grid">
+            <a href="https://missao.org.br/" target="_blank" rel="noopener noreferrer"><span>SITE INSTITUCIONAL</span><strong>Partido Missão ↗</strong><small>Apresentação do partido, comunicados e atualizações.</small></a>
+            <a href="https://filiacao.missao.org.br/" target="_blank" rel="noopener noreferrer"><span>FILIAÇÃO</span><strong>Missão 14 ↗</strong><small>Portal oficial para informações e processo de filiação.</small></a>
+            <a href="https://criadores.missao.org.br/" target="_blank" rel="noopener noreferrer"><span>PLATAFORMA CRIADORES</span><strong>Criadores Missão ↗</strong><small>Portal para criadores conectarem perfis e acompanharem métricas e rankings.</small></a>
+            <a href="https://livroamarelo.org.br/" target="_blank" rel="noopener noreferrer"><span>DOCUMENTO PROGRAMÁTICO</span><strong>Livro Amarelo ↗</strong><small>Conteúdo e capítulos publicados no portal dedicado ao livro.</small></a>
+            <a href="https://loja.partidomissao.com/" target="_blank" rel="noopener noreferrer"><span>LOJA</span><strong>Loja Missão ↗</strong><small>Loja vinculada aos canais do partido.</small></a>
+            <a href="https://missao.org.br/links" target="_blank" rel="noopener noreferrer"><span>LINKS OFICIAIS</span><strong>Central de links ↗</strong><small>Atalhos oficiais e atualizados para os canais do partido.</small></a>
+            <a href="https://missao.org.br/candidatos" target="_blank" rel="noopener noreferrer"><span>CANDIDATOS</span><strong>Portal de candidatos ↗</strong><small>Informações e formulários publicados no site do partido.</small></a>
+            <a href="https://www.tse.jus.br/partidos/partidos-registrados-no-tse/partido-missao" target="_blank" rel="noopener noreferrer"><span>JUSTIÇA ELEITORAL</span><strong>Consulta no TSE ↗</strong><small>Dados oficiais sobre a legenda e o registro partidário.</small></a>
+        </div>
+    </section>
+
     <section class="mission-resources" aria-labelledby="mission-resources-title">
         <div>
-            <p class="mission-kicker">CONSULTE AS FONTES</p>
-            <h2 id="mission-resources-title">Informações oficiais</h2>
-            <p>Confira os dados institucionais diretamente nas páginas responsáveis.</p>
+            <p class="mission-kicker">FONTES PRIMÁRIAS</p>
+            <h2 id="mission-resources-title">Acompanhe diretamente</h2>
+            <p>Consulte informações no site institucional e na Justiça Eleitoral. O TECH NEWS mantém esta página como uma editoria independente.</p>
         </div>
-        <a href="https://missao.org.br/" target="_blank" rel="noopener noreferrer"><span>PARTIDO</span><strong>Site oficial do Partido Missão ↗</strong><small>Informativos e comunicados do partido</small></a>
-        <a href="https://www.tse.jus.br/partidos/partidos-registrados-no-tse/partido-missao" target="_blank" rel="noopener noreferrer"><span>JUSTIÇA ELEITORAL</span><strong>Perfil no TSE ↗</strong><small>Nome, sigla, número de legenda e dados oficiais</small></a>
+        <a href="https://missao.org.br/" target="_blank" rel="noopener noreferrer"><span>PARTIDO</span><strong>Site oficial do Partido Missão ↗</strong><small>Comunicados, informativos e atualizações</small></a>
+        <a href="https://www.tse.jus.br/partidos/partidos-registrados-no-tse/partido-missao" target="_blank" rel="noopener noreferrer"><span>JUSTIÇA ELEITORAL</span><strong>Perfil no TSE ↗</strong><small>Fonte oficial para dados partidários</small></a>
     </section>
 </main>
 
