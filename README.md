@@ -88,11 +88,11 @@ Este repositório inclui regras de raiz em `.htaccess` para encaminhar as URLs p
 
 1. Contrate hospedagem PHP com banco MySQL. Para executar o comando de criação do administrador via terminal, escolha um plano com SSH.
 2. No hPanel, abra **Sites → Gerenciar → Git** (o nome da seção pode variar) e crie um repositório a partir de `https://github.com/Abnerrum/Projeto-completo-TECH-NEWS.git`, branch `main`. Deixe o caminho de instalação vazio se deseja implantar na raiz `public_html`.
-3. Crie um banco MySQL e um usuário pelo painel e importe `database/schema.sql) usando o phpMyAdmin.
-4. Pelo Gerenciador de Arquivos, crie `config/local.php) a partir de `config/local.example.php). Preencha `app_url`, uma `app_key) exclusiva, e os dados exatos do banco fornecidos pela hospedagem. O arquivo `config/local.php) está ignorado pelo Git e não deve ser enviado ao repositório.
-5. Gere uma chave exclusiva e aleatória com pelo menos 48 caracteres para `app_key). Nunca mantenha os marcadores `CHANGE_ME_...` nem use a chave local de desenvolvimento.
-6. Ative HTTPS, confirme `session_cookie_secure => true`, configure o domínio e teste primeiro a página inicial, busca, editoria `/missao.php), sitemap `/sitemap.php) e painel `/admin.php).
-7. Pelo terminal SSH, execute `php bin/create_admin.php) para criar o primeiro administrador. Não deixe scripts de configuração temporários expostos no site.
+3. Crie um banco MySQL e um usuário pelo painel e importe `database/schema.sql` usando o phpMyAdmin.
+4. Pelo Gerenciador de Arquivos, crie `config/local.php` a partir de `config/local.example.php`. Preencha `app_url`, uma `app_key` exclusiva, e os dados exatos do banco fornecidos pela hospedagem. O arquivo `config/local.php` está ignorado pelo Git e não deve ser enviado ao repositório.
+5. Gere uma chave exclusiva e aleatória com pelo menos 48 caracteres para `app_key`. Nunca mantenha os marcadores `CHANGE_ME_...` nem use a chave local de desenvolvimento.
+6. Ative HTTPS, confirme `session_cookie_secure => true`, configure o domínio e teste primeiro a página inicial, busca, editoria `/missao.php`, sitemap `/sitemap.php` e painel `/admin.php`.
+7. Pelo terminal SSH, execute `php bin/create_admin.php` para criar o primeiro administrador. Não deixe scripts de configuração temporários expostos no site.
 
 **Atenção:** o banco começa vazio. O portal será publicado, mas as notícias só aparecerão após criá-las pelo painel editorial. Revise os links externos da editoria Missão antes da publicação e mantenha o conteúdo jornalístico atribuído às fontes originais.
 
