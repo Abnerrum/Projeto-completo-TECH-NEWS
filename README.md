@@ -17,10 +17,18 @@ Portal editorial responsivo com página pública, busca, categorias, leitura de 
 - `app/functions.php` — validação, proteção CSRF, escape HTML e funções auxiliares
 - `bin/create_admin.php` — criação do primeiro administrador via terminal
 - `database/schema.sql` — tabelas do portal
-- `public/index.php` — página inicial, busca, categorias e leitura de notícias
+- `public/index.php` — capa de destaque, busca, categorias, paginação e leitura de notícias
 - `public/admin.php` — login e painel editorial
+- `public/sitemap.php` — sitemap XML das reportagens publicadas (requer `APP_URL`)
 - `public/assets/` — CSS, JavaScript e logotipo
 - `public/.htaccess` — configurações básicas de segurança do Apache
+
+## Recursos públicos
+
+- Página inicial com matéria mais recente em destaque, editorias e cartões responsivos.
+- Busca por título, resumo e conteúdo, com filtros por categoria e paginação.
+- Reportagens com estimativa de leitura, compartilhamento por link/WhatsApp e outras matérias da mesma editoria.
+- Metadados Open Graph/Twitter, dados estruturados `NewsArticle` e sitemap XML quando `APP_URL` estiver configurado.
 
 ## Recursos de segurança
 
@@ -66,6 +74,7 @@ Portal editorial responsivo com página pública, busca, categorias, leitura de 
 - Configure a raiz pública do servidor para apontar somente para a pasta `public/`.
 - Ative HTTPS e defina `SESSION_COOKIE_SECURE=true`.
 - Defina `APP_ENV=production`.
+- Defina `APP_URL` com o endereço HTTPS público do portal, por exemplo `https://seu-dominio.com.br`; isso habilita URLs canônicas, prévias de compartilhamento e o sitemap.
 - Defina uma chave exclusiva e aleatória em `APP_KEY`, com pelo menos 48 caracteres.
 - Configure `DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USER` e `DB_PASSWORD` por variáveis de ambiente; evite usar o usuário root do banco.
 - Não exponha os diretórios `app/`, `bin/` e `database/` pela web.
@@ -85,5 +94,5 @@ Antes de publicar notícias, confira as informações em fontes confiáveis, atr
 
 - Existe um único nível de administrador; não há perfis separados de repórter e revisor.
 - Não há comentários públicos, upload de imagens, newsletter ou integração automática com redes sociais.
-- A página pública lista até 24 notícias e o painel mostra as 100 mais recentes.
+- A página pública mostra 12 notícias por página e oferece paginação; o painel mostra as 100 mais recentes.
 - A aplicação foi verificada por sintaxe PHP, mas o teste completo com banco MySQL depende de um ambiente com a extensão `pdo_mysql` ativa.
