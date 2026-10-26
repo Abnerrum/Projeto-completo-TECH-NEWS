@@ -281,6 +281,10 @@ $flash = flash_get();
             <a href="https://loja.partidomissao.com/" target="_blank" rel="noopener noreferrer"><span>LOJA</span><strong>Loja Missão ↗</strong><small>Loja vinculada aos canais do partido.</small></a>
             <a href="https://missao.org.br/links" target="_blank" rel="noopener noreferrer"><span>LINKS OFICIAIS</span><strong>Central de links ↗</strong><small>Atalhos oficiais e atualizados para os canais do partido.</small></a>
             <a href="https://missao.org.br/candidatos" target="_blank" rel="noopener noreferrer"><span>CANDIDATOS</span><strong>Portal de candidatos ↗</strong><small>Informações e formulários publicados no site do partido.</small></a>
+            <a href="https://missao.org.br/editais" target="_blank" rel="noopener noreferrer"><span>DOCUMENTOS PÚBLICOS</span><strong>Editais ↗</strong><small>Convocações e documentos publicados pela organização partidária.</small></a>
+            <a href="https://missao.org.br/informativos" target="_blank" rel="noopener noreferrer"><span>COMUNICADOS</span><strong>Informativos ↗</strong><small>Comunicados e declarações oficiais publicados no site.</small></a>
+            <a href="https://missao.org.br/diretorios" target="_blank" rel="noopener noreferrer"><span>ESTRUTURA PARTIDÁRIA</span><strong>Diretórios ↗</strong><small>Consulta aos diretórios listados por estado no portal oficial.</small></a>
+            <a href="https://missao.org.br/" target="_blank" rel="noopener noreferrer"><span>ATUALIZAÇÕES</span><strong>Newsletter oficial ↗</strong><small>Visite o site do partido para localizar o formulário de atualizações e consultar os termos aplicáveis.</small></a>
             <a href="https://www.tse.jus.br/partidos/partidos-registrados-no-tse/partido-missao" target="_blank" rel="noopener noreferrer"><span>JUSTIÇA ELEITORAL</span><strong>Consulta no TSE ↗</strong><small>Dados oficiais sobre a legenda e o registro partidário.</small></a>
         </div>
     </section>
