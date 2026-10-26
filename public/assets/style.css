@@ -64,3 +64,84 @@
 .pagination-status{color:#91a9bd;font-size:11px;font-weight:750}
 @media(max-width:1000px){.featured-layout{grid-template-columns:1fr}.topic-aside{padding:21px}.topic-links{grid-template-columns:repeat(3,minmax(0,1fr))}.featured-story{grid-template-columns:1fr 1fr}.featured-media,.featured-media>.cover-placeholder{min-height:320px}.related-grid{gap:10px}.related-card-content{padding:12px}}
 @media(max-width:640px){.featured-layout{gap:13px;margin-top:20px}.featured-story{grid-template-columns:1fr}.featured-media{height:220px;min-height:220px}.featured-media>.cover-placeholder{min-height:220px}.featured-copy{padding:19px}.featured-copy h2{margin:11px 0;font-size:25px}.featured-copy>p{margin-bottom:14px;font-size:13px}.featured-copy time{margin-top:14px}.topic-aside{padding:18px}.topic-aside h2{font-size:20px}.topic-links{grid-template-columns:1fr 1fr}.share-tools{align-items:flex-start;padding:15px;margin-top:24px}.share-actions{width:100%}.share-button{flex:1}.related-section{margin-top:38px}.related-section>h2{font-size:23px}.related-grid{grid-template-columns:1fr}.related-card{display:grid;grid-template-columns:105px minmax(0,1fr)}.related-image{height:100%;min-height:140px}.related-card-content{padding:13px}.related-card-content p{-webkit-line-clamp:2}.pagination{gap:8px}.pagination a,.pagination-disabled{padding:0 10px}.pagination-status{width:100%;order:-1;text-align:center}}
+
+
+/* Missão special coverage — clearly separated from the TECH NEWS brand */
+.mission-page{--mission-gold:#ffc72e;--mission-gold-soft:#ffe28a;--mission-ink:#110f0a;--mission-panel:#15150f;--mission-line:#40361b}
+.mission-site-header .mission-nav-link,.mission-site-header .mission-nav-active{color:var(--mission-gold)}
+.mission-nav-link span{margin-left:4px;color:var(--mission-gold)}
+.mission-nav-active:after{background:var(--mission-gold)!important}
+.mission-main{padding-top:32px}
+.mission-hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr);gap:38px;align-items:center;padding:38px 0 34px;border-bottom:1px solid var(--mission-line)}
+.mission-kicker{display:flex;align-items:center;gap:9px;margin:0 0 12px;color:var(--mission-gold);font-size:10px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase}
+.mission-kicker>span{display:inline-block;width:8px;height:8px;border-radius:2px;background:var(--mission-gold);box-shadow:0 0 18px rgba(255,199,46,.3)}
+.mission-hero h1{margin:0;font-size:clamp(42px,6vw,72px);font-weight:950;line-height:1;letter-spacing:-2.8px}
+.mission-hero h1 em{color:var(--mission-gold);font-style:normal}
+.mission-slogan{margin:20px 0 12px;color:#f5e8c2;font-size:clamp(20px,2.5vw,28px);font-weight:800;line-height:1.25;letter-spacing:-.4px}
+.mission-intro{max-width:630px;margin:0;color:#bdb8a7;font-size:15px;line-height:1.8}
+.mission-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:26px}
+.mission-facts>div{min-width:0;padding:13px 12px;border:1px solid #3b331b;border-radius:10px;background:linear-gradient(150deg,#17170f,#10100b)}
+.mission-facts span{display:block;margin-bottom:5px;color:#a79d81;font-size:9px;font-weight:850;letter-spacing:1px}
+.mission-facts strong{display:block;color:#f8f0d7;font-size:13px;line-height:1.35}
+.mission-hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.mission-button{display:inline-flex;align-items:center;justify-content:center;min-height:43px;padding:0 15px;border:1px solid transparent;border-radius:9px;font-size:12px;font-weight:900;transition:.2s}
+.mission-button-gold{background:var(--mission-gold);color:#171205}
+.mission-button-gold:hover{background:#ffdd70;transform:translateY(-1px)}
+.mission-button-outline{border-color:#5b4b23;background:#17170f;color:#f4e4af}
+.mission-button-outline:hover{border-color:var(--mission-gold);color:#fff}
+.mission-hero-visual{min-width:0;display:grid;gap:12px}
+.mission-logo-frame{display:flex;align-items:center;gap:18px;min-height:170px;padding:22px;border:1px solid #3b341e;border-radius:17px;background:radial-gradient(circle at 90% 0,rgba(255,199,46,.12),transparent 38%),linear-gradient(140deg,#1b1a11,#090909);overflow:hidden}
+.mission-logo-frame img{flex:none;width:124px;height:124px;object-fit:contain;border:1px solid #29261a;border-radius:8px;background:#050505}
+.mission-logo-frame span{max-width:150px;color:#b8aa7d;font-size:10px;font-weight:850;letter-spacing:1.4px;line-height:1.7}
+.mission-photo{margin:0;overflow:hidden;border:1px solid #3b341e;border-radius:15px;background:#090909}
+.mission-photo>a{display:block;height:215px;overflow:hidden;background:#17170f}
+.mission-photo img{width:100%;height:100%;object-fit:cover;object-position:center 35%;transition:transform .4s}
+.mission-photo>a:hover img{transform:scale(1.035)}
+.mission-photo figcaption{padding:10px 13px;color:#a99e7e;font-size:10px;line-height:1.5}
+.mission-photo figcaption a,.mission-logo-credit a{color:var(--mission-gold-soft);font-weight:800}
+.mission-photo figcaption a:hover,.mission-logo-credit a:hover{text-decoration:underline}
+.mission-logo-credit{margin:0;color:#756d55;font-size:10px}
+.mission-editorial-note{display:grid;grid-template-columns:130px 1fr;gap:20px;margin:22px 0 0;padding:17px 19px;border:1px solid #3b341e;border-radius:12px;background:#12120d}
+.mission-editorial-note strong{color:var(--mission-gold);font-size:12px}
+.mission-editorial-note p{margin:0;color:#b9b19b;font-size:12px;line-height:1.7}
+.mission-section{padding-top:44px}
+.mission-section .section-heading{align-items:end;margin-bottom:20px}
+.mission-section .section-heading h2{font-size:29px}
+.mission-section .section-kicker{color:var(--mission-gold)}
+.mission-page .section-count{color:#9c9272}
+.mission-page .news-card{border-color:#39331f;background:linear-gradient(155deg,#17170f,#0b0b08)}
+.mission-page .news-card:hover{border-color:#a88a2e}
+.mission-page .card-meta span{border-color:#6a5318;color:var(--mission-gold);background:rgba(255,199,46,.05)}
+.mission-page .card-content h3 a:hover{color:var(--mission-gold-soft)}
+.mission-page .read-more{color:var(--mission-gold)}
+.mission-card-placeholder{position:relative;display:flex;width:100%;height:100%;min-height:190px;flex-direction:column;justify-content:center;align-items:flex-start;padding:24px;overflow:hidden;background:radial-gradient(circle at 80% 15%,rgba(255,199,46,.24),transparent 32%),linear-gradient(140deg,#27220f,#050505 75%);color:#fff}
+.mission-card-placeholder:after{content:"";position:absolute;right:-45px;bottom:-90px;width:180px;height:180px;border:1px solid rgba(255,199,46,.3);border-radius:50%;box-shadow:0 0 0 22px rgba(255,199,46,.03),0 0 0 44px rgba(255,199,46,.02)}
+.mission-card-placeholder span{color:#d6c58e;font-size:11px;font-weight:900;letter-spacing:3px}
+.mission-card-placeholder b{color:var(--mission-gold);font-size:48px;line-height:1;letter-spacing:-2px}
+.mission-empty{display:flex;align-items:flex-start;gap:18px;padding:25px;border:1px dashed #5c4a1d;border-radius:15px;background:radial-gradient(circle at 5% 0,rgba(255,199,46,.06),transparent 40%),#11110c}
+.mission-empty-icon{display:grid;place-items:center;flex:none;width:53px;height:53px;border:1px solid #6f571a;border-radius:12px;background:#211b0b;color:var(--mission-gold);font-size:15px;font-weight:950}
+.mission-empty h3{margin:0 0 7px;font-size:17px}
+.mission-empty p{margin:0 0 13px;color:#a9a18b;font-size:12px;line-height:1.7}
+.mission-inline-link{color:var(--mission-gold);font-size:12px;font-weight:900}
+.mission-press-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.mission-press-card{display:flex;min-width:0;flex-direction:column;padding:20px;border:1px solid #39331f;border-radius:14px;background:linear-gradient(155deg,#17170f,#0c0c08);transition:border-color .2s,transform .2s}
+.mission-press-card:hover{border-color:#8e7423;transform:translateY(-2px)}
+.mission-press-meta{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:15px}
+.mission-press-meta span{color:var(--mission-gold);font-size:10px;font-weight:950;letter-spacing:1px;text-transform:uppercase}
+.mission-press-meta time{color:#8e866c;font-size:10px}
+.mission-press-card h3{margin:0 0 11px;font-size:18px;line-height:1.3;letter-spacing:-.35px}
+.mission-press-card h3 a:hover{color:var(--mission-gold-soft)}
+.mission-press-card p{margin:0 0 22px;color:#ada58f;font-size:12px;line-height:1.75}
+.mission-read-source{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:13px;border-top:1px solid #302a17;color:var(--mission-gold);font-size:11px;font-weight:850}
+.mission-curation-note{margin:13px 0 0;color:#777059;font-size:10px;line-height:1.6}
+.mission-resources{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:13px;align-items:stretch;margin-top:45px;padding:23px;border:1px solid #3b341e;border-radius:16px;background:linear-gradient(130deg,#19180f,#0c0c08)}
+.mission-resources>div{padding:7px 5px}
+.mission-resources h2{margin:0 0 8px;font-size:24px;letter-spacing:-.5px}
+.mission-resources>div>p:last-child{margin:0;color:#a9a18c;font-size:12px;line-height:1.7}
+.mission-resources>a{display:flex;flex-direction:column;justify-content:center;gap:7px;padding:17px;border:1px solid #3b341e;border-radius:11px;background:#10100b;transition:border-color .2s}
+.mission-resources>a:hover{border-color:var(--mission-gold)}
+.mission-resources>a span{color:var(--mission-gold);font-size:9px;font-weight:900;letter-spacing:1.1px}
+.mission-resources>a strong{font-size:13px;line-height:1.4}
+.mission-resources>a small{color:#968d72;font-size:10px;line-height:1.5}
+@media(max-width:960px){.mission-hero{grid-template-columns:1fr;gap:25px}.mission-hero-visual{grid-template-columns:minmax(0,.65fr) minmax(0,1fr);align-items:start}.mission-logo-frame{min-height:200px;flex-direction:column;align-items:flex-start;justify-content:center}.mission-logo-frame img{width:105px;height:105px}.mission-logo-frame span{max-width:100%}.mission-photo>a{height:250px}.mission-logo-credit{grid-column:1/-1}.mission-press-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mission-resources{grid-template-columns:1fr 1fr}.mission-resources>div{grid-column:1/-1}}
+@media(max-width:640px){.mission-main{padding-top:17px}.mission-hero{padding:22px 0 25px;gap:20px}.mission-hero h1{font-size:46px;letter-spacing:-1.7px}.mission-slogan{margin-top:15px;font-size:21px}.mission-intro{font-size:13px}.mission-facts{gap:6px;margin-top:20px}.mission-facts>div{padding:11px 8px}.mission-facts span{font-size:8px;letter-spacing:.4px}.mission-facts strong{font-size:11px}.mission-button{flex:1;padding:0 9px;font-size:10px}.mission-hero-visual{grid-template-columns:1fr;gap:10px}.mission-logo-frame{min-height:130px;flex-direction:row;align-items:center;gap:15px;padding:15px}.mission-logo-frame img{width:95px;height:95px}.mission-logo-frame span{font-size:9px}.mission-photo>a{height:195px}.mission-logo-credit{grid-column:auto}.mission-editorial-note{grid-template-columns:1fr;gap:7px;padding:15px}.mission-section{padding-top:31px}.mission-section .section-heading h2{font-size:24px}.mission-page .news-grid{grid-template-columns:1fr}.mission-empty{padding:17px;gap:12px}.mission-empty-icon{width:43px;height:43px}.mission-empty h3{font-size:15px}.mission-press-grid{grid-template-columns:1fr;gap:10px}.mission-press-card{padding:17px}.mission-press-card h3{font-size:17px}.mission-resources{grid-template-columns:1fr;padding:16px;margin-top:30px}.mission-resources>div{grid-column:auto}.mission-resources h2{font-size:22px}}
