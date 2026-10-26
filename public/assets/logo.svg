@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Símbolo TECH NEWS">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#53e0ff"/><stop offset="1" stop-color="#0780ef"/></linearGradient></defs>
+  <path d="M17 15 42 31 53 9 81 26 91 53 75 83 50 95 40 70 21 81 26 57 9 40Z" fill="none" stroke="url(#g)" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M42 31 29 48 48 46 40 70 58 59 75 83 68 56 83 43 62 42 53 9 50 37Z" fill="url(#g)" opacity=".92"/>
+  <path d="m31 51 13-2-6 9m18-18 14 5-10 7m-5 12 10 8" fill="none" stroke="#061323" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
