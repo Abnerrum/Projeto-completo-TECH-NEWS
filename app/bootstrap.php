@@ -9,7 +9,8 @@ date_default_timezone_set('UTC');
 if ($technews_config['app_env'] === 'production') {
     ini_set('display_errors', '0');
     ini_set('log_errors', '1');
-    if (strlen((string) $technews_config['app_key']) < 48 || str_starts_with((string) $technews_config['app_key'], 'local-development')) {
+    if (strlen((string) $technews_config['app_key']) < 48 || str_starts_with((string) $technews_config['app_key'], 'local-development')
+        || str_starts_with((string) $technews_config['app_key'], 'CHANGE_ME_')) {
         error_log('TECH NEWS: configure a strong APP_KEY before using production.');
         http_response_code(500);
         exit('Configuração de segurança incompleta.');
