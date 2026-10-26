@@ -96,6 +96,27 @@ Este repositório inclui regras de raiz em `.htaccess` para encaminhar as URLs p
 
 **Atenção:** o banco começa vazio. O portal será publicado, mas as notícias só aparecerão após criá-las pelo painel editorial. Revise os links externos da editoria Missão antes da publicação e mantenha o conteúdo jornalístico atribuído às fontes originais.
 
+## Hospedagem gratuita no InfinityFree (PHP + MySQL)
+
+O Netlify não executa PHP nem hospeda um banco MySQL para esta aplicação. Para testar o portal sem pagar, o InfinityFree oferece hospedagem PHP/MySQL gratuita com subdomínio e SSL. Confira os limites e as regras do serviço antes de publicar.
+
+1. Crie uma conta em https://www.infinityfree.com/ e selecione um subdomínio gratuito.
+2. No painel, crie o site e abra **File Manager**. Entre na pasta `htdocs`.
+3. Baixe o repositório em https://github.com/Abnerrum/Projeto-completo-TECH-NEWS/archive/refs/heads/main.zip. Extraia o arquivo no computador e envie **o conteúdo de dentro da pasta do projeto** para `htdocs`, incluindo o arquivo raiz `.htaccess` e as pastas `app/`, `bin/`, `config/`, `database/` e `public/`. Não deixe tudo dentro de uma pasta adicional `Projeto-completo-TECH-NEWS-main/`.
+4. No painel do InfinityFree, crie um banco MySQL e importe `database/schema.sql` no phpMyAdmin.
+5. No Gerenciador de Arquivos, copie `config/local.example.php` para `config/local.php` e edite o segundo arquivo. Configure:
+   - `app_url`: endereço HTTPS do subdomínio, depois que o SSL estiver ativo;
+   - `app_env`: `production`;
+   - `app_key`: chave aleatória exclusiva de no mínimo 48 caracteres;
+   - `setup_key`: outra chave aleatória e secreta, diferente da `app_key`, com no mínimo 48 caracteres;
+   - `session_cookie_secure`: `true`, depois de confirmar que o HTTPS funciona;
+   - `db.host`, `db.name`, `db.user` e `db.password`: copie exatamente os dados do painel. O host do banco pode não ser `localhost`.
+6. Abra `/setup-admin.php` no navegador, informe a `setup_key`, o e-mail do administrador e uma senha de 12 a 72 bytes. A página só permite criar o primeiro administrador e fica indisponível quando já existe uma conta.
+7. Assim que a conta for criada, **apague `public/setup-admin.php` do servidor** pelo Gerenciador de Arquivos e remova `setup_key` de `config/local.php`. Não compartilhe esse token nem publique `config/local.php`.
+8. Teste a página inicial, `/missao.php), `/admin.php) e `/sitemap.php). O banco começa vazio; crie as notícias pelo painel editorial.
+
+**Limitações do plano gratuito:** não conte com SSH, envio de e-mail do servidor ou disponibilidade de nível empresarial. O portal serve como demonstração/portfólio; faça backups externos do banco e dos arquivos. A publicação é manual via Gerenciador de Arquivos/FTP, não um deploy automático do GitHub.
+
 ## Publicação editorial
 
 1. Entre em `/admin.php`.
