@@ -1,6 +1,10 @@
 Options -Indexes
 RewriteEngine On
 
+# Block Git metadata and hidden environment files from direct web requests.
+RewriteRule ^\.(git|svn)(/|$) - [F,L,NC]
+RewriteRule ^\.env(?:/|$) - [F,L,NC]
+
 # Block internal source/configuration directories from direct web requests.
 RewriteRule ^(app|bin|database|config)(/|$) - [F,L,NC]
 
