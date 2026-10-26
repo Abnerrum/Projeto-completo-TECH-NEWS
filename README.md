@@ -113,7 +113,7 @@ O Netlify não executa PHP nem hospeda um banco MySQL para esta aplicação. Par
    - `db.host`, `db.name`, `db.user` e `db.password`: copie exatamente os dados do painel. O host do banco pode não ser `localhost`.
 6. Abra `/setup-admin.php` no navegador, informe a `setup_key`, o e-mail do administrador e uma senha de 12 a 72 bytes. A página só permite criar o primeiro administrador e fica indisponível quando já existe uma conta.
 7. Assim que a conta for criada, **apague `public/setup-admin.php` do servidor** pelo Gerenciador de Arquivos e remova `setup_key` de `config/local.php`. Não compartilhe esse token nem publique `config/local.php`.
-8. Teste a página inicial, `/missao.php), `/admin.php) e `/sitemap.php). O banco começa vazio; crie as notícias pelo painel editorial.
+8. Teste a página inicial, `/missao.php`, `/admin.php) e `/sitemap.php`. O banco começa vazio; crie as notícias pelo painel editorial.
 
 **Limitações do plano gratuito:** não conte com SSH, envio de e-mail do servidor ou disponibilidade de nível empresarial. O portal serve como demonstração/portfólio; faça backups externos do banco e dos arquivos. A publicação é manual via Gerenciador de Arquivos/FTP, não um deploy automático do GitHub.
 
