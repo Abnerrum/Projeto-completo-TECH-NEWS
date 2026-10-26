@@ -39,6 +39,9 @@ return [
     'app_key' => $applicationKey !== false && $applicationKey !== ''
         ? $applicationKey
         : (string) ($local['app_key'] ?? 'local-development-only-change-this-key-before-production-94f6a3d8c2b17e05'),
+    'setup_key' => (getenv('SETUP_KEY') !== false && getenv('SETUP_KEY') !== '')
+        ? (string) getenv('SETUP_KEY')
+        : (string) ($local['setup_key'] ?? ''),
     'session_cookie_secure' => filter_var(
         $secureCookieEnvironment !== false
             ? $secureCookieEnvironment
