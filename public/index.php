@@ -186,6 +186,7 @@ $flash = flash_get();
             <?php foreach ($categories as $navCategory): ?>
                 <a class="nav-item <?= $category === $navCategory ? 'active' : '' ?>" href="/?categoria=<?= rawurlencode($navCategory) ?>"><?= e($navCategory) ?></a>
             <?php endforeach; ?>
+            <a class="nav-item mission-nav-link" href="/missao.php">Especial Missão <span aria-hidden="true">↗</span></a>
         </div>
     </nav>
 </header>
