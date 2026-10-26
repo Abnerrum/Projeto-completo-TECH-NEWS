@@ -2,26 +2,65 @@
 declare(strict_types=1);
 
 /*
- * Configuration via environment variables is preferred in production.
- * For local XAMPP, these development defaults work with a fresh installation
- * whose MySQL root account has no password. Never use these defaults online.
+ * Local/production configuration:
+ * - Local development may use the safe defaults below.
+ * - On shared hosting, copy config/local.example.php to config/local.php and
+ *   enter your database credentials and a unique APP_KEY in that ignored file.
+ * - Environment variables take precedence over local.php when provided.
  */
+
+$local = [];
+$localFile = dirname(__DIR__) . '/config/local.php';
+if (is_file($localFile)) {
+    $loaded = require $localFile;
+    if (is_array($loaded)) {
+        $local = $loaded;
+    }
+}
+$localDb = is_array($local['db'] ?? null) ? $local['db'] : [];
+
+$environment = getenv('APP_ENV');
+$applicationKey = getenv('APP_KEY');
+$applicationUrl = getenv('APP_URL');
+$secureCookieEnvironment = getenv('SESSION_COOKIE_SECURE');
+$dbHostEnvironment = getenv('DB_HOST');
+$dbPortEnvironment = getenv('DB_PORT');
+$dbNameEnvironment = getenv('DB_NAME');
+$dbUserEnvironment = getenv('DB_USER');
+$dbPasswordEnvironment = getenv('DB_PASSWORD');
+
 return [
-    'app_url' => getenv('APP_URL') ?: '',
-    'app_env' => getenv('APP_ENV') ?: 'development',
-    'app_key' => getenv('APP_KEY') ?: 'local-development-only-change-this-key-before-production-94f6a3d8c2b17e05',
+    'app_url' => $applicationUrl !== false && $applicationUrl !== ''
+        ? $applicationUrl
+        : (string) ($local['app_url'] ?? ''),
+    'app_env' => $environment !== false && $environment !== ''
+        ? $environment
+        : (string) ($local['app_env'] ?? 'development'),
+    'app_key' => $applicationKey !== false && $applicationKey !== ''
+        ? $applicationKey
+        : (string) ($local['app_key'] ?? 'local-development-only-change-this-key-before-production-94f6a3d8c2b17e05'),
     'session_cookie_secure' => filter_var(
-        getenv('SESSION_COOKIE_SECURE') !== false
-            ? getenv('SESSION_COOKIE_SECURE')
-            : (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off'),
+        $secureCookieEnvironment !== false
+            ? $secureCookieEnvironment
+            : ($local['session_cookie_secure'] ?? (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')),
         FILTER_VALIDATE_BOOLEAN
     ),
     'db' => [
-        'host' => getenv('DB_HOST') ?: '127.0.0.1',
-        'port' => getenv('DB_PORT') ?: '3306',
-        'name' => getenv('DB_NAME') ?: 'technews',
-        'user' => getenv('DB_USER') ?: 'root',
-        'password' => getenv('DB_PASSWORD') !== false ? (string) getenv('DB_PASSWORD') : '',
-        'charset' => 'utf8mb4',
+        'host' => $dbHostEnvironment !== false && $dbHostEnvironment !== ''
+            ? $dbHostEnvironment
+            : (string) ($localDb['host'] ?? '127.0.0.1'),
+        'port' => $dbPortEnvironment !== false && $dbPortEnvironment !== ''
+            ? $dbPortEnvironment
+            : (string) ($localDb['port'] ?? '3306'),
+        'name' => $dbNameEnvironment !== false && $dbNameEnvironment !== ''
+            ? $dbNameEnvironment
+            : (string) ($localDb['name'] ?? 'technews'),
+        'user' => $dbUserEnvironment !== false && $dbUserEnvironment !== ''
+            ? $dbUserEnvironment
+            : (string) ($localDb['user'] ?? 'root'),
+        'password' => $dbPasswordEnvironment !== false
+            ? (string) $dbPasswordEnvironment
+            : (string) ($localDb['password'] ?? ''),
+        'charset' => (string) ($localDb['charset'] ?? 'utf8mb4'),
     ],
 ];
