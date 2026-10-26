@@ -7,6 +7,7 @@ declare(strict_types=1);
  * whose MySQL root account has no password. Never use these defaults online.
  */
 return [
+    'app_url' => getenv('APP_URL') ?: '',
     'app_env' => getenv('APP_ENV') ?: 'development',
     'app_key' => getenv('APP_KEY') ?: 'local-development-only-change-this-key-before-production-94f6a3d8c2b17e05',
     'session_cookie_secure' => filter_var(
