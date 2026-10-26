@@ -21,6 +21,8 @@ echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">', "\n";
 
 $homeUrl = $baseUrl . '/';
 echo "  <url><loc>", htmlspecialchars($homeUrl, ENT_XML1 | ENT_QUOTES, 'UTF-8'), "</loc></url>\n";
+$missionUrl = $baseUrl . '/missao.php';
+echo "  <url><loc>", htmlspecialchars($missionUrl, ENT_XML1 | ENT_QUOTES, 'UTF-8'), "</loc></url>\n";
 
 $statement = db()->query("SELECT slug, published_at FROM news WHERE status = 'published' AND published_at IS NOT NULL AND published_at <= UTC_TIMESTAMP() ORDER BY published_at DESC");
 while ($row = $statement->fetch()) {
