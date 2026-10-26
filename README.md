@@ -18,6 +18,7 @@ Portal editorial responsivo com página pública, busca, categorias, leitura de 
 - `bin/create_admin.php` — criação do primeiro administrador via terminal
 - `database/schema.sql` — tabelas do portal
 - `public/index.php` — capa de destaque, busca, categorias, paginação e leitura de notícias
+- `public/missao.php` — editoria especial do Partido Missão, com links de imprensa, canais oficiais, aplicativos e serviços
 - `public/admin.php` — login e painel editorial
 - `public/sitemap.php` — sitemap XML das reportagens publicadas (requer `APP_URL`)
 - `public/assets/` — CSS, JavaScript e logotipo
@@ -29,6 +30,7 @@ Portal editorial responsivo com página pública, busca, categorias, leitura de 
 - Busca por título, resumo e conteúdo, com filtros por categoria e paginação.
 - Reportagens com estimativa de leitura, compartilhamento por link/WhatsApp e outras matérias da mesma editoria.
 - Metadados Open Graph/Twitter, dados estruturados `NewsArticle` e sitemap XML quando `APP_URL` estiver configurado.
+- Página temática `/missao.php` com links para os canais de YouTube, redes sociais, app Android/iOS, filiação, plataforma Criadores, Livro Amarelo, loja, site oficial e TSE. A página identifica a cobertura independente e liga às fontes originais.
 
 ## Recursos de segurança
 
