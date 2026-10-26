@@ -12,6 +12,7 @@ return [
     'app_url' => 'https://SEU-DOMINIO.com.br',
     'app_env' => 'production',
     'app_key' => 'CHANGE_ME_GENERATE_A_RANDOM_KEY_WITH_AT_LEAST_48_CHARACTERS',
+    'setup_key' => 'GENERATE_A_SEPARATE_RANDOM_SETUP_TOKEN_AND_REMOVE_AFTER_USE',
     'session_cookie_secure' => true,
     'db' => [
         'host' => 'HOST_MYSQL_INFORMADO_PELO_PROVEDOR',
