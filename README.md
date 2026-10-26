@@ -20,6 +20,7 @@ Portal editorial responsivo com página pública, busca, categorias, leitura de 
 - `public/index.php` — capa de destaque, busca, categorias, paginação e leitura de notícias
 - `public/missao.php` — editoria especial do Partido Missão, com links de imprensa, canais oficiais, aplicativos e serviços
 - `public/admin.php` — login e painel editorial
+- `public/setup-admin.php` — criação protegida e de uso único do primeiro administrador em hospedagens sem SSH; remova o arquivo do servidor depois de usar
 - `public/sitemap.php` — sitemap XML das reportagens publicadas (requer `APP_URL`)
 - `public/assets/` — CSS, JavaScript e logotipo
 - `public/.htaccess` — configurações básicas de segurança do Apache
