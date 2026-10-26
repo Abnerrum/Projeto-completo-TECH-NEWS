@@ -1,0 +1,23 @@
+Options -Indexes
+RewriteEngine On
+
+# Block internal source/configuration directories from direct web requests.
+RewriteRule ^(app|bin|database|config)(/|$) - [F,L,NC]
+
+# Prevent visitors from bypassing the intended public entry points.
+# Internal rewrites are allowed because THE_REQUEST keeps the original URL.
+RewriteCond %{THE_REQUEST} \s/+public(?:/|\s|\?) [NC]
+RewriteRule ^public(?:/|$) - [F,L,NC]
+
+# Keep the public URL structure while the repository root is deployed to public_html.
+RewriteRule ^assets/(.*)$ public/assets/$1 [L,NC]
+RewriteRule ^(index|admin|missao|sitemap)\.php$ public/$1.php [L,NC]
+RewriteRule ^$ public/index.php [L]
+
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+<FilesMatch "^(README\.md|.*\.sql)$">
+    Require all denied
+</FilesMatch>
