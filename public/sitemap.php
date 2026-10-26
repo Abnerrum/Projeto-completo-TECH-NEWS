@@ -16,7 +16,6 @@ if (!is_array($parts)
 }
 
 header('Content-Type: application/xml; charset=UTF-8');
-header('X-Robots-Tag: noindex');
 echo '<?xml version="1.0" encoding="UTF-8"?>', "\n";
 echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">', "\n";
 
