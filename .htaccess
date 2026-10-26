@@ -15,7 +15,7 @@ RewriteRule ^public(?:/|$) - [F,L,NC]
 
 # Keep the public URL structure while the repository root is deployed to public_html.
 RewriteRule ^assets/(.*)$ public/assets/$1 [L,NC]
-RewriteRule ^(index|admin|missao|sitemap)\.php$ public/$1.php [L,NC]
+RewriteRule ^(index|admin|missao|sitemap|setup-admin)\.php$ public/$1.php [L,NC]
 RewriteRule ^$ public/index.php [L]
 
 <FilesMatch "^\.">
