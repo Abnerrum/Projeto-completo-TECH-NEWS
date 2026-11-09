@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{ title or "TECH NEWS" }}</title><meta name="description" content="Notícias de tecnologia, inteligência artificial e negócios em Goiás.">
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/style.css">
+<style>
+.tn-shell{max-width:1180px;margin:auto;padding:24px}.tn-nav{display:flex;gap:14px;flex-wrap:wrap;margin:24px 0}
+.tn-nav a,.tn-link{color:#22d3ee;text-decoration:none}.tn-brand{font-size:1.8rem;font-weight:900;color:#fff}
+.tn-brand span{color:#22d3ee}.tn-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.tn-panel{padding:22px;border:1px solid #1b5970;background:#081c2f;border-radius:14px}
+.tn-panel img{max-width:100%;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px}
+.tn-panel h2{font-size:1.4rem;margin:14px 0}.tn-muted{color:#b4c7d6}
+.tn-form{display:grid;gap:10px;max-width:760px}.tn-form input,.tn-form select,.tn-form textarea{padding:12px;border-radius:7px;border:1px solid #42829c;background:#061526;color:white;width:100%}
+.tn-form button,.tn-button{padding:12px 18px;background:#20d9e8;color:#041724;border:0;border-radius:8px;font-weight:bold;cursor:pointer}
+.tn-story{white-space:pre-wrap;line-height:1.8}.tn-card-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+@media(max-width:600px){.tn-shell{padding:16px}.tn-brand{font-size:1.5rem}}
+</style></head>
+<body style="background:#041120;color:#f0f9ff;min-height:100vh;font-family:Arial,sans-serif">
+<div class="tn-shell"><header><a class="tn-brand" href="/"><img src="/assets/logo.svg" width="44" height="44" alt="" style="vertical-align:middle"> TECH <span>NEWS</span></a><p class="tn-muted">Tecnologia, negócios, desenvolvimento e inovação.</p></header>
+<nav class="tn-nav"><a href="/">Início</a>{% for c in categories %}<a href="/?categoria={{ c|urlencode }}">{{ c }}</a>{% endfor %}<a href="/admin">Painel</a></nav>
+<main>{% block main %}{% endblock %}</main>
+<footer style="padding-top:35px;color:#91adbd">© TECH NEWS • Informação responsável • <a class="tn-link" href="/">Início</a></footer></div>
+<script src="/assets/app.js" defer></script></body></html>
