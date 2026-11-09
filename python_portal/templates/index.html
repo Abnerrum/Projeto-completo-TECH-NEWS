@@ -1,0 +1,16 @@
+{% extends "base.html" %}{% block main %}
+<h1>Notícias de tecnologia em Goiás</h1><p class="tn-muted">Acompanhe inovação, inteligência artificial e negócios.</p>
+<form method="get" action="/" class="tn-form" style="max-width:100%;display:flex;flex-wrap:wrap;margin:22px 0">
+<input aria-label="Buscar notícias" style="flex:2;min-width:200px" type="search" name="q" value="{{ q }}" maxlength="100" placeholder="Pesquisar notícias...">
+<select name="categoria" style="flex:1;min-width:160px"><option value="">Todas as editorias</option>{% for c in categories %}<option value="{{ c }}" {% if categoria == c %}selected{% endif %}>{{ c }}</option>{% endfor %}</select>
+<button>Buscar</button></form>
+<div class="tn-grid">{% for n in rows %}
+<article class="tn-panel">{% if n.cover_url %}<a href="/noticia/{{ n.slug }}"><img src="{{ n.cover_url }}" alt=""></a>{% endif %}
+<p class="tn-muted">{{ n.category }} • {{ n.published_at.strftime('%d/%m/%Y') if n.published_at else '' }}</p>
+<h2><a class="tn-link" href="/noticia/{{ n.slug }}">{{ n.title }}</a></h2><p>{{ n.excerpt }}</p>
+<a class="tn-link" href="/noticia/{{ n.slug }}">Ler matéria →</a></article>
+{% else %}<div class="tn-panel"><h2>Nenhuma notícia encontrada</h2><p>Novas reportagens serão publicadas aqui.</p></div>{% endfor %}</div>
+<div class="tn-nav">{% if page > 1 %}<a href="/?page={{ page-1 }}&categoria={{ categoria|urlencode }}&q={{ q|urlencode }}">← Anterior</a>{% endif %}
+<span>Página {{ page }} de {{ pages }}</span>
+{% if page < pages %}<a href="/?page={{ page+1 }}&categoria={{ categoria|urlencode }}&q={{ q|urlencode }}">Próxima →</a>{% endif %}</div>
+{% endblock %}

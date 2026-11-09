@@ -1,0 +1,25 @@
+{% extends "base.html" %}{% block main %}
+{% if not logged %}<section class="tn-panel"><h1>Entrar no painel</h1>{% if error %}<p role="alert">{{ error }}</p>{% endif %}
+<form action="/admin/login" method="post" class="tn-form"><input type="hidden" name="_csrf" value="{{ token }}">
+<label>E-mail<input type="email" name="email" maxlength="190" required autocomplete="username"></label>
+<label>Senha<input type="password" name="password" required autocomplete="current-password"></label>
+<button type="submit">Entrar</button></form></section>
+{% else %}
+<div class="tn-card-actions"><h1>Painel editorial</h1><form action="/admin/logout" method="post"><input type="hidden" name="_csrf" value="{{ token }}"><button class="tn-button">Sair</button></form></div>
+<section class="tn-panel"><h2>{{ "Editar matéria" if item else "Nova reportagem" }}</h2>
+<form action="/admin/save" method="post" class="tn-form"><input type="hidden" name="_csrf" value="{{ token }}">
+<input type="hidden" name="article_id" value="{{ item.id if item else 0 }}">
+<label>Título<input name="title" maxlength="180" required value="{{ item.title if item else '' }}"></label>
+<label>Categoria<select name="category">{% for c in categories %}<option value="{{ c }}" {% if item and item.category == c %}selected{% endif %}>{{ c }}</option>{% endfor %}</select></label>
+<label>Resumo<textarea name="excerpt" maxlength="320" required rows="3">{{ item.excerpt if item else '' }}</textarea></label>
+<label>Texto<textarea name="body" required rows="12">{{ item.body if item else '' }}</textarea></label>
+<label>URL da capa (HTTPS ou /assets/)<input type="text" maxlength="2048" name="cover_url" value="{{ (item.cover_url or '') if item else '' }}"></label>
+<label>URL da fonte (HTTPS)<input type="url" maxlength="2048" name="source_url" value="{{ (item.source_url or '') if item else '' }}"></label>
+<label>Status<select name="status"><option value="draft" {% if not item or item.status == 'draft' %}selected{% endif %}>Rascunho</option><option value="published" {% if item and item.status == 'published' %}selected{% endif %}>Publicada</option></select></label>
+<button>Salvar reportagem</button></form></section>
+<h2>Últimas matérias</h2><div class="tn-grid">{% for r in rows %}
+<div class="tn-panel"><p class="tn-muted">{{ r.category }} • {{ r.status }}</p><h3>{{ r.title }}</h3>
+<div class="tn-card-actions"><a class="tn-link" href="/admin?edit={{ r.id }}">Editar</a>
+<form method="post" action="/admin/delete" data-confirm="Excluir esta reportagem?"><input type="hidden" name="_csrf" value="{{ token }}"><input type="hidden" name="article_id" value="{{ r.id }}"><button class="tn-button">Excluir</button></form></div></div>
+{% else %}<p>Nenhuma matéria cadastrada.</p>{% endfor %}</div>
+{% endif %}{% endblock %}

@@ -3,3 +3,8 @@
 /vendor/
 *.log
 .DS_Store
+
+/python_portal/.env
+/python_portal/.venv/
+/python_portal/__pycache__/
+/python_portal/.pytest_cache/
