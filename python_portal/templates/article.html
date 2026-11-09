@@ -1,0 +1,11 @@
+{% extends "base.html" %}{% block main %}
+<article class="tn-panel" style="max-width:900px;margin:auto">
+<p class="tn-muted">{{ item.category }} • {{ item.published_at.strftime('%d/%m/%Y') if item.published_at else '' }}</p>
+<h1>{{ item.title }}</h1><p class="tn-muted">{{ item.excerpt }}</p>
+{% if item.cover_url %}<img src="{{ item.cover_url }}" alt="Imagem ilustrativa da reportagem">{% endif %}
+<div class="tn-story">{{ item.body }}</div>
+{% if item.source_url %}<p><a class="tn-link" href="{{ item.source_url }}" target="_blank" rel="noopener noreferrer">Consultar a fonte original</a></p>{% endif %}
+<div class="tn-card-actions"><button class="tn-button" data-copy-page-url type="button">Copiar link</button><button class="tn-button" data-share-whatsapp data-share-title="{{ item.title }}" type="button">WhatsApp</button><span data-share-status role="status"></span></div>
+</article>
+{% if related %}<h2>Leia também</h2><div class="tn-grid">{% for r in related %}<article class="tn-panel"><h3><a class="tn-link" href="/noticia/{{ r.slug }}">{{ r.title }}</a></h3><p>{{ r.excerpt }}</p></article>{% endfor %}</div>{% endif %}
+{% endblock %}
